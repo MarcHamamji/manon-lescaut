@@ -61,6 +61,11 @@ export const cycles: Cycle[] = [
         latlng: L.latLng(48.868148093204724, 2.2889581373564263)
       },
       {
+        placeName: 'Hôtel de Transylvanie',
+        description: 'Tricheries de Des Grieux et de Lescaut au jeu',
+        latlng: L.latLng(48.857669947510125, 2.3351464193936438),
+      },
+      {
         placeName: 'Prison de Saint-Lazare',
         description: 'Emprisonnement de Des Grieux',
         latlng: L.latLng(48.875859343936455, 2.354293231148066),
@@ -77,7 +82,7 @@ export const cycles: Cycle[] = [
     events: [
       {
         placeName: 'Prison de Saint-Lazare',
-        description: 'Evasion de Des Grieux',
+        description: 'Assasinat d\'un portier et évasion de Des Grieux',
         latlng: L.latLng(48.875859343936455, 2.354293231148066),
       },
       {
