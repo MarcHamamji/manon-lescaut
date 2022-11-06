@@ -23,7 +23,7 @@ export const cycles: Cycle[] = [
       {
         placeName: 'Hôtel Lion d\'Or',
         description: 'Des Grieux raconte toute son histoire',
-        latlng: L.latLng(50.95157725866254, 1.8582214254860336),
+        latlng: L.latLng(50.94933291727435, 1.8785309679816125),
       },
     ],
   },
@@ -39,6 +39,11 @@ export const cycles: Cycle[] = [
         placeName: 'Saint-Denis',
         description: 'Fugue de Des Grieux et Manon',
         latlng: L.latLng(48.93570646696406, 2.3582349276637875),
+      },
+      {
+        placeName: 'Appartement de Des Grieux et Manon',
+        description: 'Trahison de Manon avec G... M...',
+        latlng: L.latLng(48.93627095570989, 2.355140768775227),
       },
       {
         placeName: 'Église Saint-Sulpice',
@@ -121,7 +126,12 @@ export const cycles: Cycle[] = [
         latlng: L.latLng(29.927394826948387, -89.87398201975412),
       },
       {
-        placeName: 'Hôtel Lion d\'Or',
+        placeName: 'Havre-de-Grâce',
+        description: 'Départ pour la France',
+        latlng: L.latLng(39.548409760547365, -76.11095854699857),
+      },
+      {
+        placeName: 'Calais',
         description: 'Retour de Des Grieux chez son frère',
         latlng: L.latLng(50.95157725866254, 1.8582214254860336),
       },
