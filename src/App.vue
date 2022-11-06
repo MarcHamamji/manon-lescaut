@@ -1,6 +1,8 @@
 <script setup lang="ts">
+import { useRoute } from 'vue-router';
 import { useCyclesStore } from './stores/cycles';
 
+const route = useRoute();
 const cyclesStore = useCyclesStore();
 </script>
 
@@ -8,7 +10,7 @@ const cyclesStore = useCyclesStore();
   <main class="main">
     <header>
       <h2>Manon Lescaut</h2>
-      <span class="infos">
+      <span v-if="route.name === 'play'" class="infos">
         <span class="text">
           Selectionner le lieu où l'évènement suivant a lieu:
         </span>
@@ -16,7 +18,7 @@ const cyclesStore = useCyclesStore();
           {{ cyclesStore.currentEventInfo.description }}
         </span>
       </span>
-      <span class="score">
+      <span v-if="route.name === 'play'" class="score">
         <span class="text">
           Erreurs:
         </span>
