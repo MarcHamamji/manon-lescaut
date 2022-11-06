@@ -38,7 +38,7 @@ const cyclesStore = useCyclesStore()
 
 .sidebar {
   width: 400px;
-  max-width: 30vw;
+  max-width: 40vw;
   padding: 12px;
   padding-right: 18px;
   overflow-y: scroll;
