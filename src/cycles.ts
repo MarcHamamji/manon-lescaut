@@ -23,7 +23,7 @@ export const cycles: Cycle[] = [
       {
         placeName: 'Hôtel Lion d\'Or',
         description: 'Des Grieux raconte toute son histoire',
-        latlng: L.latLng(51.03171327889308, 2.3707714266324538),
+        latlng: L.latLng(50.95157725866254, 1.8582214254860336),
       },
     ],
   },
@@ -72,7 +72,7 @@ export const cycles: Cycle[] = [
     events: [
       {
         placeName: 'Prison de Saint-Lazare',
-        description: 'Fuite de Des Grieux',
+        description: 'Evasion de Des Grieux',
         latlng: L.latLng(48.875859343936455, 2.354293231148066),
       },
       {
@@ -119,6 +119,11 @@ export const cycles: Cycle[] = [
         placeName: 'Désert',
         description: 'Mort de Manon',
         latlng: L.latLng(29.927394826948387, -89.87398201975412),
+      },
+      {
+        placeName: 'Hôtel Lion d\'Or',
+        description: 'Retour de Des Grieux chez son frère',
+        latlng: L.latLng(50.95157725866254, 1.8582214254860336),
       },
     ],
   },
