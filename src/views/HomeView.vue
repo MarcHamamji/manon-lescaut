@@ -104,7 +104,6 @@ const playAgain = () => {
   });
   polyline.addTo(map);
 
-  console.log(document.getElementById('0,0'));
   setTimeout(() => {
     document.getElementById('0,0')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }, 0);
@@ -115,7 +114,6 @@ const playAgain = () => {
   <div class="view">
     <side-bar />
     <div ref="mapElement" class="map fh"></div>
-    <button @click="() => {nextEvent(); audio.success.play()}"></button>
   </div>
   <el-dialog
     v-model="cyclesStore.isDone"
