@@ -22,8 +22,13 @@ router.push('play')
           <li>Appuyez sur le marqueur de la carte où vous croyez que l'action sélectionnée a eu lieu</li>
           <li>Votre nombre d'erreurs augmentera pour chaque fausse réponse</li>
           <li>Faites de même pour chaque évènement</li>
-          <li>Amusez vous bien!</li>
         </ol>
+        <h3 class="title">Notes</h3>
+        <ol>
+          <li>Un marqueur peut être utilisé a plusieurs reprises</li>
+          <li>Sur smartphone, vous pouvez appuyer longuement sur un marqueur pour révéler son nom</li>
+        </ol>
+        <h3 class="title">Amusez vous bien!</h3>
       </div>
     </el-main>
     <el-footer class="footer">
