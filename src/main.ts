@@ -1,7 +1,6 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import ElementPlus from 'element-plus'
-import { inject } from '@vercel/analytics';
 
 import App from './App.vue'
 import router from './router'
@@ -19,4 +18,10 @@ app.use(ElementPlus)
 
 app.mount('#app')
 
-inject();
+if (import.meta.env.PROD) {
+  (async () => {
+    const { inject } = await import('@vercel/analytics')
+    inject();
+  })();
+}
+

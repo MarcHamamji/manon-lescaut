@@ -32,6 +32,13 @@ const cyclesStore = useCyclesStore();
 </template>
 
 <style scoped lang="scss">
+
+@media only screen and (max-width: 600px) {
+  span.infos * {
+    display: none;
+  }
+}
+
 .main {
   margin: 0;
   padding: 0;
@@ -51,6 +58,7 @@ const cyclesStore = useCyclesStore();
     align-items: center;
 
     h2 {
+      white-space: nowrap;
       font-size: 1.5rem;
       margin: 0px 18px;
     }
@@ -63,7 +71,6 @@ const cyclesStore = useCyclesStore();
       justify-content: center;
 
       .event {
-        // font-size: 28px;
         font-size: 1.5rem;
         font-style: italic;
       }

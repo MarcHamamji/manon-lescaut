@@ -42,7 +42,7 @@ export const cycles: Cycle[] = [
       },
       {
         placeName: 'Appartement de Des Grieux et Manon',
-        description: 'Trahison de Manon avec G... M...',
+        description: 'Trahison de Manon avec M. de B...',
         latlng: L.latLng(48.93627095570989, 2.355140768775227),
       },
       {

@@ -36,6 +36,14 @@ const cyclesStore = useCyclesStore()
 
 <style lang="scss" scoped>
 
+@media only screen and (max-width: 600px) {
+  aside.sidebar {
+    width: 100%;
+    max-width: initial;
+    height: 50%;
+  }
+}
+
 .sidebar {
   width: 400px;
   max-width: 40vw;

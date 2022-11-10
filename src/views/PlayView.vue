@@ -121,7 +121,8 @@ const playAgain = () => {
     :show-close="false"
     :close-on-press-escape="false"
     :close-on-click-modal="false"
-    width="420px"
+    width="90vw"
+    class="dialog"
   >
     <el-result
       class="result"
@@ -141,6 +142,13 @@ const playAgain = () => {
 </template>
 
 <style scoped lang="scss">
+
+@media only screen and (max-width: 600px) {
+  div.view {
+    flex-direction: column;
+  }
+}
+
 .view {
   min-height: 0px;
   display: flex;
@@ -154,9 +162,9 @@ const playAgain = () => {
 
 .result {
   padding: 2px;
+}
 
-  .replay {
-    width: 360px;
-  }
+.dialog {
+  max-width: 90vw !important;
 }
 </style>
