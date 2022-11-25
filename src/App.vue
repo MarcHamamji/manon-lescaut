@@ -18,6 +18,14 @@ const cyclesStore = useCyclesStore();
           {{ cyclesStore.currentEventInfo.description }}
         </span>
       </span>
+      <span v-if="route.name === 'play'" class="timer">
+        <span class="text">
+          Temps écoulé:
+        </span>
+        <span class="event">
+          {{ cyclesStore.time }}
+        </span>
+      </span>
       <span v-if="route.name === 'play'" class="score">
         <span class="text">
           Erreurs:
@@ -73,6 +81,18 @@ const cyclesStore = useCyclesStore();
       .event {
         font-size: 1.5rem;
         font-style: italic;
+      }
+    }
+
+    .timer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-right: 2vw;
+
+      .event {
+        font-size: 38px;
       }
     }
 

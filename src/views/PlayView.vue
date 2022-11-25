@@ -63,10 +63,20 @@ onMounted(() => {
           audio.success.currentTime = 0;
           audio.success.play();
           nextEvent();
+          if (cyclesStore.isDone) {
+            cyclesStore.stopTimer();
+          }
+          if (cyclesStore.absoluteIndex === 1) {
+            cyclesStore.startTimer();
+          }
         } else {
           audio.fail.play();
           cyclesStore.wrongGuesses++;
+          if (cyclesStore.absoluteIndex === 0) {
+            cyclesStore.startTimer();
+          }
         }
+
       });
       markers.push(marker);
     });
@@ -91,6 +101,7 @@ const playAgain = () => {
   cyclesStore.eventIndex = 0;
   cyclesStore.cycleIndex = 0;
   cyclesStore.wrongGuesses = 0;
+  cyclesStore.resetTimer();
 
   const group = L.featureGroup(markers);
   map.fitBounds(group.getBounds());
@@ -108,6 +119,7 @@ const playAgain = () => {
     document.getElementById('0,0')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }, 0);
 };
+
 </script>
 
 <template>
@@ -130,6 +142,10 @@ const playAgain = () => {
       title="Vous avez gagné!"
     >
       <template #sub-title>
+        <b>
+          Temps écoulé: {{ cyclesStore.time }}
+        </b>
+        <br />
         <b>
           Erreurs: {{ cyclesStore.wrongGuesses }}
         </b>

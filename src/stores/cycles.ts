@@ -15,6 +15,36 @@ export const useCyclesStore = defineStore('cycles', () => {
   const totalEvents = eventCounts.reduce((sum, num) => {
     return sum + num;
   }, 0);
+  
+  const startTime = ref(0);
+  const deltaTime = ref(0);
+  const timerInterval = ref<number>();
+
+  const updateTimer = () => {
+    const now = Date.now();
+    deltaTime.value = Math.floor((now - startTime.value) / 1000);
+  };
+
+  const time = computed(() => {
+    return String(Math.floor(deltaTime.value / 60)).padStart(2, '0') + ':' + String(deltaTime.value % 60).padStart(2, '0');
+  });
+
+  const startTimer = () => {
+    startTime.value = Date.now();
+    stopTimer();
+    updateTimer();
+    timerInterval.value = setInterval(() => {
+      updateTimer();
+    }, 1000);
+  };
+
+  const stopTimer = () => {
+    clearInterval(timerInterval.value);
+  };
+
+  const resetTimer = () => {
+    deltaTime.value = 0;
+  };
 
   const nextIndex = () => {
     if (absoluteIndex.value === totalEvents) return;
@@ -89,5 +119,9 @@ export const useCyclesStore = defineStore('cycles', () => {
     currentEventInfo,
     isDone,
     wrongGuesses,
+    time,
+    startTimer,
+    stopTimer,
+    resetTimer,
   };
 })
