@@ -41,7 +41,7 @@ const cyclesStore = useCyclesStore();
 
 <style scoped lang="scss">
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   span.infos * {
     display: none;
   }
@@ -64,11 +64,16 @@ const cyclesStore = useCyclesStore();
     z-index: 110;
     height: 84px;
     align-items: center;
+    justify-content: space-around;
+    gap: 2vw;
 
     h2 {
       white-space: nowrap;
       font-size: 1.5rem;
-      margin: 0px 18px;
+    }
+
+    .text {
+      font-size: 14px;
     }
 
     .infos {
@@ -89,10 +94,9 @@ const cyclesStore = useCyclesStore();
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin-right: 2vw;
 
       .event {
-        font-size: 38px;
+        font-size: 32px;
       }
     }
 
@@ -101,7 +105,6 @@ const cyclesStore = useCyclesStore();
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin-right: 2vw;
 
       .event {
         font-size: 38px;

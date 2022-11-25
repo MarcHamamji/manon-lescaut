@@ -51,8 +51,8 @@ const cyclesStore = useCyclesStore()
   padding-right: 18px;
   overflow-y: scroll;
   background-color: #dedfe0;
-  box-shadow: 8px 0px 24px 0px rgba(149, 157, 165, 0.8);
-  z-index: 105;
+  box-shadow: 8px 0px 10px 0px rgba(0, 0, 0, 0.2), 0px 8px 10px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 }
 
 </style>
